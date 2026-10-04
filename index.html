@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Learning Helper</title>
+    <meta name="description" content="JavaScript Learning Helper for beginning students.">
+    <meta name="author" content="Abinadi Momoh Oke">
+    <meta property="og:title" content="JavaScript Learning Helper">
+    <meta property="og:description" content="JavaScript Learning Helper for beginning students.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://amomoh6392.github.io/javascript.helper/images/logo.jpg">
+    <meta property="og:url" content="https://amomoh6392.github.io/javascript.helper/">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/large_styles.css">
+    <script type="module" src="scripts/main.js" defer></script>
+</head>
+<body>
+   <header>
+        <div class="header-container">
+
+            <a href="index.html" class="logo"><img src="images/logo.svg" alt="JavaScript Learning Helper"><span>JS Learning Helper</span></a>
+
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >☰</button>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#search">Search</a>
+                <a href="#history">History</a>
+                <a href="#saved">Saved</a>
+            </nav>
+
+        </div>
+   </header> 
+   <main>
+        <section id="search" class="hero-section">
+            <div class="hero-content">
+                <p class="eyebrow">JavaScript Learning Helper</p>
+                <h1>Find help with JavaScript</h1>
+                <p class="hero-text">
+                Search for JavaScript topics, find helpful answers,
+                and keep learning one problem at a time.
+                </p>
+                <form id="search-form" class="search-form">
+                <label for="search-input">
+                    What JavaScript topic do you need help with?
+                </label>
+                <div class="search-box">
+                    <input
+                    type="search"
+                    id="search-input"
+                    name="search"
+                    placeholder="Example: arrays, loops, functions..."
+                    autocomplete="off"
+                    required
+                    >
+                    <button type="submit" class="primary-button">
+                    Search
+                    </button>
+                </div>
+                <div
+                    id="suggestions"
+                    class="suggestions"
+                    aria-live="polite"
+                ></div>
+                </form>
+            </div>
+        </section>
+        <section class="application-section">
+
+            <div class="application-container">
+
+                <section id="results-section" class="results-section" aria-labelledby="results-heading">
+
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-label">Search</p>
+                            <h2 id="results-heading">Search Results</h2>
+                        </div>
+                        <p id="results-count"></p>
+                    </div>
+
+                    <div id="loading" class="status-message hidden" aria-live="polite">Searching for helpful answers...</div>
+
+                    <div id="error-message" class="status-message error-message hidden" role="alert"></div>
+
+                    <div
+                        id="no-results"
+                        class="status-message hidden"
+                        aria-live="polite">No results were found. Try another JavaScript topic.</div>
+
+                    <div id="results-container"class="results-container"></div>
+                </section>
+                <section id="message-section" class="message-section"aria-labelledby="message-heading">
+
+                    <div class="message-card">
+                        <img src="images/icon.svg" alt="" class="message-icon">
+
+                        <div>
+                            <p class="section-label">Keep going</p>
+                            <h2 id="message-heading">
+                                You are learning
+                            </h2>
+                            <p id="encouragement-message">
+                                Every problem you solve helps you understand JavaScript better.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section id="related-section" class="related-section" aria-labelledby="related-heading">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-label">Explore</p>
+                            <h2 id="related-heading">Related Topics</h2>
+                        </div>
+                    </div>
+                    <div id="related-topics" class="related-topics">
+                        <p> Search for a topic to see related subjects.</p>
+                    </div>
+                </section>
+                    <section id="history" class="history-section" aria-labelledby="history-heading">
+
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-label">Your searches</p>
+                            <h2 id="history-heading">Search History</h2>
+                        </div>
+                        <button id="clear-history" type="button" class="secondary-button">Clear History</button>
+                    </div>
+                    <div id="history-container" class="history-container">
+                        <p>
+                        Your search history will appear here.
+                        </p>
+                    </div>
+                </section>
+                <section id="saved" class="saved-section" aria-labelledby="saved-heading">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-label">Keep for later</p>
+                            <h2 id="saved-heading">Saved Topics</h2>
+                        </div>
+                    </div>
+                    <div id="saved-container" class="saved-container">
+                        <p>
+                        Topics you save will appear here.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+        <p>&copy; <span id="current-year"></span>
+            JavaScript Learning Helper</p>
+        <p>Built for beginning Software Development students.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
