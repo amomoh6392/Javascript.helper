@@ -58,7 +58,7 @@
                     <input
                     type="search"
                     id="search-input"
-                    name="search"
+                    name="topic"
                     placeholder="Example: arrays, loops, functions..."
                     autocomplete="off"
                     required
@@ -99,6 +99,36 @@
                         aria-live="polite">No results were found. Try another JavaScript topic.</div>
 
                     <div id="results-container"class="results-container"></div>
+                    
+                    <dialog id="answer-dialog" class="answer-dialog">
+                    <div class="dialog-header">
+                        <h2 id="dialog-title">Question Details</h2>
+                    </div>
+
+                    <div id="dialog-content">
+                        <p>Question details will appear here.</p>
+                    </div>
+
+                    <div class="dialog-actions">
+                        <a
+                        id="dialog-view-link"
+                        class="secondary-button"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >
+                        View on Stack Overflow
+                        </a>
+                        <button
+                        type="button"
+                        id="dialog-close-button"
+                        class="primary-button"
+                        >
+                        Close
+                        </button>
+                    </div>
+                    </dialog>
+
                 </section>
                 <section id="message-section" class="message-section"aria-labelledby="message-heading">
 

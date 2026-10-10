@@ -1,0 +1,541 @@
+/* ================================
+   Base
+================================ */
+
+:root {
+  --evergreen: #041b15;
+  --dark-cyan: #4e8f86;
+  --stormy-teal: #1e615d;
+  --frozen-water: #c9eae7;
+
+  --white: #ffffff;
+  --light-text: #f5f5f5;
+  --border: #8dbdb8;
+
+  --heading-font: "Roboto Mono", monospace;
+  --body-font: "Lora", serif;
+
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--frozen-water);
+  color: var(--evergreen);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+
+/* ================================
+   Header
+================================ */
+
+.site-header {
+  background-color: var(--evergreen);
+  color: var(--white);
+}
+
+.header-container {
+  width: min(100% - 2rem, var(--max-width));
+  margin: 0 auto;
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--heading-font);
+  font-weight: 700;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.menu-button {
+  border: 0;
+  background: transparent;
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.main-nav {
+  display: none;
+}
+
+
+/* ================================
+   Hero / Search
+================================ */
+
+.hero-section {
+  padding: 3rem 1rem;
+  background-color: var(--frozen-water);
+}
+
+.hero-content {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 0.4rem;
+  color: var(--stormy-teal);
+  font-family: var(--heading-font);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  font-family: var(--heading-font);
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 8vw, 4rem);
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.search-form {
+  width: min(100%, 750px);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.search-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.search-box input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0.8rem 1rem;
+
+  border: 2px solid var(--dark-cyan);
+  border-radius: 8px;
+
+  background-color: var(--white);
+  color: var(--evergreen);
+}
+
+.search-box input:focus {
+  outline: 3px solid var(--stormy-teal);
+  outline-offset: 2px;
+}
+
+
+/* ================================
+   Buttons
+================================ */
+
+.primary-button,
+.secondary-button {
+  min-height: 48px;
+  padding: 0.7rem 1.2rem;
+
+  border: 2px solid transparent;
+  border-radius: 8px;
+
+  font-family: var(--heading-font);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: var(--evergreen);
+  color: var(--white);
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  background-color: var(--stormy-teal);
+}
+
+.secondary-button {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+  background-color: var(--stormy-teal);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--stormy-teal);
+  outline-offset: 3px;
+}
+
+
+/* ================================
+   Suggestions
+================================ */
+
+.suggestions {
+  position: relative;
+  z-index: 10;
+}
+
+.suggestion-item {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 1rem;
+
+  border: 1px solid var(--border);
+  border-top: 0;
+
+  background-color: var(--white);
+  color: var(--evergreen);
+
+  text-align: left;
+  cursor: pointer;
+}
+
+.suggestion-item:hover,
+.suggestion-item:focus {
+  background-color: var(--frozen-water);
+}
+
+
+/* ================================
+   Application
+================================ */
+
+.application-section {
+  padding: 3rem 1rem;
+}
+
+.application-container {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.results-section,
+.related-section,
+.history-section,
+.saved-section {
+  margin-bottom: 3rem;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+
+/* ================================
+   Status Messages
+================================ */
+
+.status-message {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+
+  border-left: 5px solid var(--stormy-teal);
+  border-radius: 6px;
+
+  background-color: var(--white);
+}
+
+.error-message {
+  border-left-color: var(--evergreen);
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* ================================
+   Results
+================================ */
+
+.results-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.result-card {
+  padding: 1.25rem;
+
+  border: 2px solid var(--dark-cyan);
+  border-radius: 10px;
+
+  background-color: var(--white);
+}
+
+.result-card h3 {
+  margin-top: 0;
+  font-family: var(--heading-font);
+  line-height: 1.4;
+}
+
+.result-card p {
+  margin-bottom: 1rem;
+}
+
+.result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+
+  font-size: 0.9rem;
+}
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+
+/* ================================
+   Message
+================================ */
+
+.message-section {
+  margin-bottom: 3rem;
+}
+
+.message-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 1.5rem;
+
+  border-radius: 12px;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+}
+
+.message-card .section-label {
+  color: var(--frozen-water);
+}
+
+.message-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.message-icon {
+  width: 55px;
+  flex-shrink: 0;
+}
+
+
+/* ================================
+   Related Topics
+================================ */
+
+.related-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.related-topic {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+
+  border: 2px solid var(--stormy-teal);
+  border-radius: 20px;
+
+  background-color: var(--white);
+  color: var(--evergreen);
+
+  font-family: var(--heading-font);
+  text-decoration: none;
+}
+
+.related-topic:hover,
+.related-topic:focus {
+  background-color: var(--stormy-teal);
+  color: var(--white);
+}
+
+
+/* ================================
+   History and Saved
+================================ */
+
+.history-container,
+.saved-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.history-item,
+.saved-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  border-radius: 8px;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+}
+
+.history-item h3,
+.saved-item h3 {
+  margin: 0;
+  font-family: var(--heading-font);
+}
+
+.history-actions,
+.saved-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.answer-dialog {
+  width: min(90%, 650px);
+  max-width: 650px;
+  max-height: 80vh;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--evergreen);
+  color: var(--white);
+  overflow-y: auto;
+}
+
+.answer-dialog::backdrop {
+  background: rgb(0 0 0 / 65%);
+}
+
+.dialog-header {
+  margin-bottom: 1rem;
+}
+
+.dialog-header h2 {
+  margin: 0;
+}
+
+#dialog-content {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.dialog-actions a,
+.dialog-actions button {
+  margin: 0;
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+.site-footer {
+  padding: 2rem 1rem;
+
+  background-color: var(--evergreen);
+  color: var(--white);
+  text-align: center;
+}
+
+.footer-container {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+}
+
+.footer-container p {
+  margin: 0.4rem 0;
+}
+
+
+/* ================================
+   Small screens
+================================ */
+
+@media (max-width: 500px) {
+  .message-card {
+    flex-direction: column;
+  }
+
+  .result-actions button {
+    width: 100%;
+  }
+
+  .section-heading .secondary-button {
+    width: 100%;
+  }
+}
