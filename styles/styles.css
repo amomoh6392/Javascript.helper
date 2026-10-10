@@ -49,9 +49,12 @@ input {
 }
 
 
-/* ================================
+/* 
    Header
-================================ */
+*/
+
+
+/* Header */
 
 .site-header {
   background-color: var(--evergreen);
@@ -59,14 +62,18 @@ input {
 }
 
 .header-container {
-  width: min(100% - 2rem, var(--max-width));
+  width: 100%;
   margin: 0 auto;
   min-height: 70px;
+  padding: 1rem;
 
   display: flex;
+  flex-direction: row;
   align-items: center;
+  gap: 0.5rem;
   justify-content: space-between;
-  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: var(--evergreen);
 }
 
 .logo {
@@ -80,12 +87,8 @@ input {
   font-weight: 700;
 }
 
-.logo img {
-  width: 40px;
-  height: 40px;
-}
-
 .menu-button {
+  align-self: flex-end;
   border: 0;
   background: transparent;
   color: var(--white);
@@ -95,12 +98,33 @@ input {
 
 .main-nav {
   display: none;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.main-nav.open {
+  display: flex;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  background-color: var(--stormy-teal);
+  border-radius: 2rem;
 }
 
 
-/* ================================
+/* 
    Hero / Search
-================================ */
+ */
 
 .hero-section {
   padding: 3rem 1rem;
@@ -177,9 +201,9 @@ h1 {
 }
 
 
-/* ================================
+/* 
    Buttons
-================================ */
+ */
 
 .primary-button,
 .secondary-button {
@@ -221,9 +245,9 @@ a:focus-visible {
 }
 
 
-/* ================================
+/* 
    Suggestions
-================================ */
+ */
 
 .suggestions {
   position: relative;
@@ -251,9 +275,9 @@ a:focus-visible {
 }
 
 
-/* ================================
+/* 
    Application
-================================ */
+*/
 
 .application-section {
   padding: 3rem 1rem;
@@ -287,9 +311,9 @@ section {
 }
 
 
-/* ================================
+/* 
    Status Messages
-================================ */
+*/
 
 .status-message {
   margin-bottom: 1.5rem;
@@ -310,9 +334,9 @@ section {
 }
 
 
-/* ================================
+/* 
    Results
-================================ */
+*/
 
 .results-container {
   display: grid;
@@ -354,9 +378,9 @@ section {
 }
 
 
-/* ================================
+/* 
    Message
-================================ */
+*/
 
 .message-section {
   margin-bottom: 3rem;
@@ -388,9 +412,9 @@ section {
 }
 
 
-/* ================================
+/* 
    Related Topics
-================================ */
+*/
 
 .related-topics {
   display: flex;
@@ -419,9 +443,9 @@ section {
 }
 
 
-/* ================================
+/* 
    History and Saved
-================================ */
+*/
 
 .history-container,
 .saved-container {
@@ -500,9 +524,9 @@ section {
 }
 
 
-/* ================================
+/* 
    Footer
-================================ */
+*/
 
 .site-footer {
   padding: 2rem 1rem;
@@ -522,9 +546,9 @@ section {
 }
 
 
-/* ================================
+/* 
    Small screens
-================================ */
+ */
 
 @media (max-width: 500px) {
   .message-card {

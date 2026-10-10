@@ -18,6 +18,8 @@
     text-decoration: none;
     font-family: var(--heading-font);
     font-weight: 600;
+    padding: 0.75rem;
+    border-top: 1px solid rgb(247 231 206 / 25%);
   }
 
   .main-nav a:hover,
@@ -57,6 +59,28 @@
     align-items: center;
     justify-content: space-between;
   }
+ 
+
+  .menu-button {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    position: static;
+    width: auto;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+
 }
 
 

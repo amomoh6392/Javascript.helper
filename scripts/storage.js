@@ -22,9 +22,25 @@ export function displayHistory() {
     const title = document.createElement("h3");
     title.textContent = topic;
 
+  
     const actions = document.createElement("div");
     actions.classList.add("history-actions");
 
+    // Search Again button
+    const searchAgainButton = document.createElement("button");
+    searchAgainButton.type = "button";
+    searchAgainButton.classList.add("secondary-button");
+    searchAgainButton.textContent = "Search Again";
+
+    searchAgainButton.addEventListener("click", () => {
+      const searchInput = document.querySelector("#search-input");
+      const searchForm = document.querySelector("#search-form");
+
+      searchInput.value = topic;
+      searchForm.requestSubmit();
+    });
+
+    // Delete button
     const deleteButton = document.createElement("button");
     deleteButton.type = "button";
     deleteButton.classList.add("secondary-button");
@@ -34,7 +50,7 @@ export function displayHistory() {
       deleteHistoryTopic(topic);
     });
 
-    actions.appendChild(deleteButton);
+    actions.append(searchAgainButton, deleteButton);
     item.append(title, actions);
     historyContainer.appendChild(item);
   });
