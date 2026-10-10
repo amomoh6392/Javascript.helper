@@ -19,7 +19,6 @@
     font-family: var(--heading-font);
     font-weight: 600;
     padding: 0.75rem;
-    border-top: 1px solid rgb(247 231 206 / 25%);
   }
 
   .main-nav a:hover,
