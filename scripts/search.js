@@ -1,11 +1,16 @@
-import {displayResults, showLoading, showError, showNoResults,} from "./results.js";
+import {
+  displayResults,
+  showLoading,
+  showError,
+  showNoResults,
+} from "./results.js";
 
 import { saveToHistory } from "./storage.js";
 import { displayRelatedTopics } from "./related.js";
 import { displayMessage } from "./message.js";
 
 const API_URL =
-  "https://api.stackexchange.com/2.3/search/excerpts?order=desc&sort=relevance&site=stackoverflow&filter=withbody&intitle=";
+  "https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=relevance&site=stackoverflow&filter=withbody";
 
 export function setupSearch(searchForm, searchInput) {
   searchForm.addEventListener("submit", async (event) => {
@@ -14,7 +19,7 @@ export function setupSearch(searchForm, searchInput) {
     const topic = searchInput.value.trim();
 
     if (!topic) {
-      showError("Please enter a JavaScript topic to search.");
+      showError("Please enter a topic to search.");
       return;
     }
 
@@ -29,7 +34,9 @@ async function searchTopic(topic) {
   displayMessage();
 
   try {
-    const response = await fetch(`${API_URL}${encodeURIComponent(topic)}`);
+    const response = await fetch(
+      `${API_URL}&q=${encodeURIComponent(topic)}`
+    );
 
     if (!response.ok) {
       throw new Error("Unable to connect to Stack Exchange.");

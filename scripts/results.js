@@ -63,9 +63,18 @@ export function displayResults(results) {
     const title = document.createElement("h3");
     title.textContent = cleanText(result.title);
 
+    
+    
     const body = document.createElement("p");
-    body.textContent = cleanText(result.excerpt || "No description available.");
+    body.classList.add("result-description");
 
+    const description = cleanText(
+      result.body || result.excerpt || ""
+    );
+
+    body.textContent = description || "No description available.";
+
+    
     const meta = document.createElement("div");
     meta.classList.add("result-meta");
 
@@ -88,12 +97,14 @@ export function displayResults(results) {
       detailsButton.classList.add("secondary-button");
       detailsButton.textContent = "Read Answer / Details";
 
+      
+      
       detailsButton.addEventListener("click", () => {
         dialogTitle.textContent = cleanText(result.title);
 
-        dialogContent.textContent = cleanText(
-          result.body || result.excerpt || "No additional details available."
-        );
+        dialogContent.textContent =
+          cleanText(result.body || result.excerpt || "") ||
+          "No additional details available.";
 
         dialogViewLink.href =
           result.link ||
@@ -126,16 +137,20 @@ export function displayResults(results) {
 
       
     actions.append(detailsButton, viewButton, saveButton);
-
     card.append(title, body, meta, actions);
+    resultsContainer.appendChild(card);  
 
-    resultsContainer.appendChild(card);
-      });
+  });
 }
 
-function cleanText(text) {
-  const temporaryElement = document.createElement("div");
-  temporaryElement.innerHTML = text;
 
-  return temporaryElement.textContent || temporaryElement.innerText || "";
+function cleanText(html) {
+  const temporaryElement = document.createElement("div");
+  temporaryElement.innerHTML = html || "";
+
+  return (
+    temporaryElement.textContent ||
+    temporaryElement.innerText ||
+    ""
+  ).trim();
 }

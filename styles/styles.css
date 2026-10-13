@@ -216,6 +216,8 @@ h1 {
   font-family: var(--heading-font);
   font-weight: 700;
   cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .primary-button {
@@ -226,6 +228,7 @@ h1 {
 .primary-button:hover,
 .primary-button:focus {
   background-color: var(--stormy-teal);
+  transform: scale(1.05);
 }
 
 .secondary-button {
@@ -236,6 +239,7 @@ h1 {
 .secondary-button:hover,
 .secondary-button:focus {
   background-color: var(--stormy-teal);
+  transform: translateY(-3px);
 }
 
 button:focus-visible,
@@ -350,6 +354,25 @@ section {
   border-radius: 10px;
 
   background-color: var(--white);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+}
+.result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(4 27 21 / 20%);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .result-card h3 {
@@ -362,6 +385,19 @@ section {
   margin-bottom: 1rem;
 }
 
+.result-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+  line-height: 1.6;
+}
+
+.result-description.expanded {
+  display: block;
+  overflow: visible;
+}
 .result-meta {
   display: flex;
   flex-wrap: wrap;
@@ -434,12 +470,16 @@ section {
 
   font-family: var(--heading-font);
   text-decoration: none;
+  transition: background-color 0.3s ease,
+            color 0.3s ease,
+            transform 0.3s ease;
 }
 
 .related-topic:hover,
 .related-topic:focus {
   background-color: var(--stormy-teal);
   color: var(--white);
+  transform: translateY(-3px);
 }
 
 
@@ -489,6 +529,18 @@ section {
   background: var(--evergreen);
   color: var(--white);
   overflow-y: auto;
+  animation: dialogAppear 0.3s ease-out;
+}
+@keyframes dialogAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .answer-dialog::backdrop {
