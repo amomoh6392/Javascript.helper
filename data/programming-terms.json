@@ -1,0 +1,581 @@
+[
+  {
+    "term": "API",
+    "category": "Web Development",
+    "aliases": [
+      "Application Programming Interface",
+      "Web API"
+    ],
+    "definition": "An API is a set of rules that allows two software applications to communicate.",
+    "articleTitle": "API"
+  },
+  {
+    "term": "Array",
+    "category": "Programming",
+    "aliases": [
+      "arrays",
+      "indexed collection"
+    ],
+    "definition": "An array is a data structure that stores multiple values in a single variable.",
+    "articleTitle": "Array (data structure)"
+  },
+  {
+    "term": "Function",
+    "category": "Programming",
+    "aliases": [
+      "functions",
+      "subroutine"
+    ],
+    "definition": "A function is a reusable block of code that performs a task.",
+    "articleTitle": "Function (computer programming)"
+  },
+  {
+    "term": "Variable",
+    "category": "Programming",
+    "aliases": [
+      "variables",
+      "variable declaration"
+    ],
+    "definition": "A variable is a named place used to store or refer to a value.",
+    "articleTitle": "Variable (computer science)"
+  },
+  {
+    "term": "Loop",
+    "category": "Programming",
+    "aliases": [
+      "loops",
+      "iteration"
+    ],
+    "definition": "A loop repeats a block of code while a condition is met or for each item in a collection.",
+    "articleTitle": "Control flow"
+  },
+  {
+    "term": "Boolean",
+    "category": "Programming",
+    "aliases": [
+      "bool",
+      "boolean data type"
+    ],
+    "definition": "A data type that can only have one of two values, typically true or false.",
+    "articleTitle": "Boolean data type"
+  },
+  {
+    "term": "String",
+    "category": "Programming",
+    "aliases": [
+      "text",
+      "string literal"
+    ],
+    "definition": "A sequence of characters used to represent text in a program.",
+    "articleTitle": "String (computer science)"
+  },
+  {
+    "term": "Integer",
+    "category": "Programming",
+    "aliases": [
+      "int",
+      "whole number"
+    ],
+    "definition": "A numeric data type that represents whole numbers without a fractional component.",
+    "articleTitle": "Integer (computer science)"
+  },
+  {
+    "term": "Float",
+    "category": "Programming",
+    "aliases": [
+      "floating-point",
+      "decimal number"
+    ],
+    "definition": "A data type that represents numbers with a decimal point or fractional part.",
+    "articleTitle": "Floating-point arithmetic"
+  },
+  {
+    "term": "Object",
+    "category": "Programming",
+    "aliases": [
+      "instance",
+      "hash map"
+    ],
+    "definition": "A collection of key-value pairs representing data and behavior in object-oriented programming.",
+    "articleTitle": "Object (computer science)"
+  },
+  {
+    "term": "Class",
+    "category": "Programming",
+    "aliases": [
+      "blueprint",
+      "type"
+    ],
+    "definition": "A blueprint or template for creating objects with defined properties and methods.",
+    "articleTitle": "Class (computer programming)"
+  },
+  {
+    "term": "Method",
+    "category": "Programming",
+    "aliases": [
+      "member function"
+    ],
+    "definition": "A function that is associated with an object or a class.",
+    "articleTitle": "Method (computer programming)"
+  },
+  {
+    "term": "Inheritance",
+    "category": "Programming",
+    "aliases": [
+      "subclassing"
+    ],
+    "definition": "A mechanism where a class can inherit properties and methods from another class.",
+    "articleTitle": "Inheritance (object-oriented programming)"
+  },
+  {
+    "term": "Polymorphism",
+    "category": "Programming",
+    "aliases": [
+      "interface polymorphism"
+    ],
+    "definition": "The ability of different classes to respond to the same method call in unique ways.",
+    "articleTitle": "Polymorphism (computer science)"
+  },
+  {
+    "term": "Encapsulation",
+    "category": "Programming",
+    "aliases": [
+      "data hiding"
+    ],
+    "definition": "Bundling data and methods that operate on that data within one unit and restricting direct access.",
+    "articleTitle": "Encapsulation (computer programming)"
+  },
+  {
+    "term": "Recursion",
+    "category": "Programming",
+    "aliases": [
+      "recursive function"
+    ],
+    "definition": "A programming technique where a function calls itself to solve a smaller piece of the same problem.",
+    "articleTitle": "Recursion (computer science)"
+  },
+  {
+    "term": "Algorithm",
+    "category": "Computer Science",
+    "aliases": [
+      "procedure",
+      "step-by-step logic"
+    ],
+    "definition": "A finite set of well-defined instructions to solve a specific problem or perform a computation.",
+    "articleTitle": "Algorithm"
+  },
+  {
+    "term": "Big O Notation",
+    "category": "Computer Science",
+    "aliases": [
+      "time complexity",
+      "space complexity"
+    ],
+    "definition": "A mathematical notation used to describe the performance or complexity of an algorithm.",
+    "articleTitle": "Big O notation"
+  },
+  {
+    "term": "Database",
+    "category": "Database",
+    "aliases": [
+      "DB",
+      "data store"
+    ],
+    "definition": "An organized collection of structured data or information stored electronically in a computer system.",
+    "articleTitle": "Database"
+  },
+  {
+    "term": "SQL",
+    "category": "Database",
+    "aliases": [
+      "Structured Query Language"
+    ],
+    "definition": "A standard programming language used for managing and querying relational databases.",
+    "articleTitle": "SQL"
+  },
+  {
+    "term": "NoSQL",
+    "category": "Database",
+    "aliases": [
+      "non-relational database"
+    ],
+    "definition": "A database designed to store and retrieve data in formats other than traditional relational tables.",
+    "articleTitle": "NoSQL"
+  },
+  {
+    "term": "Primary Key",
+    "category": "Database",
+    "aliases": [
+      "PK",
+      "unique identifier"
+    ],
+    "definition": "A column or set of columns in a database table that uniquely identifies each row.",
+    "articleTitle": "Primary key"
+  },
+  {
+    "term": "Foreign Key",
+    "category": "Database",
+    "aliases": [
+      "FK",
+      "referential key"
+    ],
+    "definition": "A column or group of columns in a table that links to the primary key of another table.",
+    "articleTitle": "Foreign key"
+  },
+  {
+    "term": "Index",
+    "category": "Database",
+    "aliases": [
+      "DB index"
+    ],
+    "definition": "A data structure that improves the speed of data retrieval operations on a database table.",
+    "articleTitle": "Database index"
+  },
+  {
+    "term": "ORM",
+    "category": "Database",
+    "aliases": [
+      "Object-Relational Mapping"
+    ],
+    "definition": "A technique that lets you query and manipulate data from a database using an object-oriented paradigm.",
+    "articleTitle": "Object–relational mapping"
+  },
+  {
+    "term": "JSON",
+    "category": "Web Development",
+    "aliases": [
+      "JavaScript Object Notation"
+    ],
+    "definition": "A lightweight data-interchange format that is easy for humans to read and write and machines to parse.",
+    "articleTitle": "JSON"
+  },
+  {
+    "term": "REST",
+    "category": "Web Development",
+    "aliases": [
+      "Representational State Transfer"
+    ],
+    "definition": "An architectural style for designing networked applications using standard HTTP methods.",
+    "articleTitle": "Representational state transfer"
+  },
+  {
+    "term": "GraphQL",
+    "category": "Web Development",
+    "aliases": [
+      "GQL"
+    ],
+    "definition": "A query language for APIs that lets clients request exact data they need.",
+    "articleTitle": "GraphQL"
+  },
+  {
+    "term": "DOM",
+    "category": "Web Development",
+    "aliases": [
+      "Document Object Model"
+    ],
+    "definition": "A cross-platform and language-independent interface that treats an XML or HTML document as a tree structure.",
+    "articleTitle": "Document Object Model"
+  },
+  {
+    "term": "HTML",
+    "category": "Web Development",
+    "aliases": [
+      "HyperText Markup Language"
+    ],
+    "definition": "The standard markup language for documents designed to be displayed in a web browser.",
+    "articleTitle": "HTML"
+  },
+  {
+    "term": "CSS",
+    "category": "Web Development",
+    "aliases": [
+      "Cascading Style Sheets"
+    ],
+    "definition": "A style sheet language used for describing the presentation of a document written in HTML.",
+    "articleTitle": "CSS"
+  },
+  {
+    "term": "Git",
+    "category": "Programming",
+    "aliases": [
+      "version control system"
+    ],
+    "definition": "A distributed version control system for tracking changes in source code during software development.",
+    "articleTitle": "Git"
+  },
+  {
+    "term": "GitHub",
+    "category": "Programming",
+    "aliases": [
+      "gh"
+    ],
+    "definition": "A web-based platform used for version control and collaboration using Git.",
+    "articleTitle": "GitHub"
+  },
+  {
+    "term": "Repository",
+    "category": "Programming",
+    "aliases": [
+      "repo"
+    ],
+    "definition": "A storage location where source code and files are managed and version-tracked.",
+    "articleTitle": "Software repository"
+  },
+  {
+    "term": "Commit",
+    "category": "Programming",
+    "aliases": [
+      "revision"
+    ],
+    "definition": "An operation that sends the latest changes of the source code to the repository history.",
+    "articleTitle": "Commit (version control)"
+  },
+  {
+    "term": "Branch",
+    "category": "Programming",
+    "aliases": [
+      "git branch"
+    ],
+    "definition": "A parallel version of a repository that lets you work without affecting the main line.",
+    "articleTitle": "Branching (version control)"
+  },
+  {
+    "term": "Merge",
+    "category": "Programming",
+    "aliases": [
+      "pull request merge"
+    ],
+    "definition": "Combining changes from multiple divergent branches of source code into a single branch.",
+
+    "articleTitle": "Merge (version control)"
+    },
+    {
+    "term": "Docker",
+    "category": "Web Development",
+    "aliases": [
+    "containerization"
+    ],
+    "definition": "A set of platform-as-a-service products that use OS-level virtualization to deliver software in containers.",
+    "articleTitle": "Docker (software)"
+    },
+    {
+    "term": "Container",
+    "category": "Web Development",
+    "aliases": [
+    "software container"
+    ],
+    "definition": "A standard unit of software that packages up code and all its dependencies so the application runs quickly.",
+    "articleTitle": "LXC"
+    },
+    {
+    "term": "Kubernetes",
+    "category": "Web Development",
+    "aliases": [
+    "k8s"
+    ],
+    "definition": "An open-source system for automating deployment, scaling, and management of containerized applications.",
+    "articleTitle": "Kubernetes"
+    },
+    {
+    "term": "IP Address",
+    "category": "Computer Science",
+    "aliases": [
+    "Internet Protocol address"
+    ],
+    "definition": "A numerical label assigned to each device connected to a computer network.",
+    "articleTitle": "IP address"
+    },
+    {
+    "term": "DNS",
+    "category": "Computer Science",
+    "aliases": [
+    "Domain Name System"
+    ],
+    "definition": "A hierarchical decentralized naming system for computers or services connected to the Internet.",
+    "articleTitle": "Domain Name System"
+    },
+    {
+    "term": "HTTP",
+    "category": "Web Development",
+    "aliases": [
+    "Hypertext Transfer Protocol"
+    ],
+    "definition": "An application layer protocol for distributed, collaborative, hypermedia information systems.",
+    "articleTitle": "Hypertext Transfer Protocol"
+    },
+    {
+    "term": "HTTPS",
+    "category": "Web Development",
+    "aliases": [
+    "HTTP Secure"
+    ],
+    "definition": "An extension of HTTP used for secure communication over a computer network.",
+    "articleTitle": "HTTPS"
+    },
+    {
+    "term": "SSL/TLS",
+    "category": "Computer Science",
+    "aliases": [
+    "Secure Sockets Layer",
+    "Transport Layer Security"
+    ],
+    "definition": "Cryptographic protocols designed to provide communications security over a computer network.",
+    "articleTitle": "Transport Layer Security"
+    },
+    {
+    "term": "Cache",
+    "category": "Computer Science",
+    "aliases": [
+    "caching"
+    ],
+    "definition": "A hardware or software component that stores data so future requests for that data can be served faster.",
+    "articleTitle": "Cache (computing)"
+    },
+    {
+    "term": "Cookie",
+    "category": "Web Development",
+    "aliases": [
+    "HTTP cookie"
+    ],
+    "definition": "A small piece of data sent from a website and stored on the user's computer by the web browser.",
+    "articleTitle": "HTTP cookie"
+    },
+    {
+    "term": "Token",
+    "category": "Web Development",
+    "aliases": [
+    "auth token",
+    "JWT"
+    ],
+    "definition": "A string of data that represents credentials or permissions to access a resource or service.",
+    "articleTitle": "Access token"
+    },
+    {
+    "term": "Authentication",
+    "category": "Computer Science",
+    "aliases": [
+    "AuthN"
+    ],
+    "definition": "The process of verifying the identity of a user, process, or device.",
+    "articleTitle": "Authentication"
+    },
+    {
+    "term": "Authorization",
+    "category": "Computer Science",
+    "aliases": [
+    "AuthZ"
+    ],
+    "definition": "The function of specifying access rights and privileges to resources.",
+    "articleTitle": "Authorization"
+    },
+    {
+    "term": "CI/CD",
+    "category": "Web Development",
+    "aliases": [
+    "Continuous Integration",
+    "Continuous Delivery"
+    ],
+    "definition": "A method to frequently deliver apps to customers by introducing automation into the stages of app development.",
+    "articleTitle": "CI/CD"
+    },
+    {
+    "term": "IDE",
+    "category": "Programming",
+    "aliases": [
+    "Integrated Development Environment"
+    ],
+    "definition": "A software application that provides comprehensive facilities to computer programmers for software development.",
+    "articleTitle": "Integrated development environment"
+    },
+    {
+    "term": "Compiler",
+    "category": "Programming",
+    "aliases": [
+    "compilation"
+    ],
+    "definition": "A computer program that translates computer code written in one programming language into another language.",
+    "articleTitle": "Compiler"
+    },
+    {
+    "term": "Interpreter",
+    "category": "Programming",
+    "aliases": [
+    "scripting interpreter"
+    ],
+    "definition": "A computer program that directly executes instructions written in a programming or scripting language without prior compilation.",
+    "articleTitle": "Interpreter (computing)"
+    },
+    {
+    "term": "Stack",
+    "category": "Computer Science",
+    "aliases": [
+    "LIFO"
+    ],
+    "definition": "A linear data structure that follows the Last In, First Out principle.",
+    "articleTitle": "Stack (abstract data type)"
+    },
+    {
+    "term": "Queue",
+    "category": "Computer Science",
+    "aliases": [
+    "FIFO"
+    ],
+    "definition": "A linear data structure that follows the First In, First Out principle.",
+    "articleTitle": "Queue (abstract data type)"
+    },
+    {
+    "term": "Binary Tree",
+    "category": "Computer Science",
+    "aliases": [
+    "tree structure"
+    ],
+    "definition": "A tree data structure in which each node has at most two children.",
+    "articleTitle": "Binary tree"
+    },
+    {
+    "term": "Hash Table",
+    "category": "Computer Science",
+    "aliases": [
+    "hash map",
+    "dictionary"
+    ],
+    "definition": "A data structure that implements an associative array abstract data type, a structure that can map keys to values.",
+    "articleTitle": "Hash table"
+    },
+    {
+    "term": "Deadlock",
+    "category": "Computer Science",
+    "aliases": [
+    "threading deadlock"
+    ],
+    "definition": "A state in which each member of a group is waiting for another member to take action, such as releasing a lock.",
+    "articleTitle": "Deadlock"
+    },
+    {
+    "term": "Microservices",
+    "category": "Web Development",
+    "aliases": [
+    "microservice architecture"
+    ],
+    "definition": "An architectural style that structures an application as a collection of loosely coupled services.",
+    "articleTitle": "Microservices"
+    },
+    {
+    "term": "Monolith",
+    "category": "Web Development",
+    "aliases": [
+    "monolithic architecture"
+    ],
+    "definition": "A software application in which all functional components are combined into a single program on a single platform.",
+    "articleTitle": "Monolithic application"
+    },
+    {
+    "term": "Webhook",
+    "category": "Web Development",
+    "aliases": [
+    "callback URL"
+    ],
+    "definition": "A way for an app to provide other applications with real-time information via an HTTP POST payload.",
+    "articleTitle": "Webhook"
+    }
+]

@@ -5,6 +5,7 @@ import {
   showNoResults,
 } from "./results.js";
 
+import { displayDefinition } from "./dictionary.js";
 import { saveToHistory } from "./storage.js";
 import { displayRelatedTopics } from "./related.js";
 import { displayMessage } from "./message.js";
@@ -29,6 +30,7 @@ export function setupSearch(searchForm, searchInput) {
   });
 }
 
+
 async function searchTopic(topic) {
   showLoading();
   displayMessage();
@@ -46,11 +48,14 @@ async function searchTopic(topic) {
 
     if (!data.items || data.items.length === 0) {
       showNoResults();
-      return;
+    } else {
+      displayResults(data.items);
+      displayRelatedTopics(topic);
     }
 
-    displayResults(data.items);
-    displayRelatedTopics(topic);
+    // Load the definition from Wikipedia's API.
+    displayDefinition(topic);
+
   } catch (error) {
     console.error("Search error:", error);
     showError("Something went wrong while searching. Please try again.");

@@ -1,7 +1,9 @@
+
 export function setupSuggestions(searchInput) {
   const suggestionsContainer = document.querySelector("#suggestions");
+  const searchForm = document.querySelector("#search-form");
 
-  if (!suggestionsContainer) return;
+  if (!suggestionsContainer || !searchInput || !searchForm) return;
 
   let suggestions = [];
 
@@ -23,7 +25,7 @@ export function setupSuggestions(searchInput) {
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.trim().toLowerCase();
 
-    suggestionsContainer.innerHTML = "";
+    suggestionsContainer.replaceChildren();
 
     if (!query) return;
 
@@ -40,17 +42,20 @@ export function setupSuggestions(searchInput) {
 
       button.addEventListener("click", () => {
         searchInput.value = topic;
-        suggestionsContainer.innerHTML = "";
-        searchInput.focus();
+        suggestionsContainer.replaceChildren();
+        searchForm.requestSubmit();
       });
 
       suggestionsContainer.appendChild(button);
     });
   });
 
-  searchInput.addEventListener("blur", () => {
-    setTimeout(() => {
-      suggestionsContainer.innerHTML = "";
-    }, 150);
+  document.addEventListener("click", (event) => {
+    if (
+      !suggestionsContainer.contains(event.target) &&
+      event.target !== searchInput
+    ) {
+      suggestionsContainer.replaceChildren();
+    }
   });
 }

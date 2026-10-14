@@ -574,7 +574,30 @@ section {
 .dialog-actions button {
   margin: 0;
 }
+/* 
+   Word Definition
+*/
 
+.definition-section {
+  margin-bottom: 3rem;
+}
+
+.definition-container {
+  padding: 1.25rem;
+  border: 2px solid var(--dark-cyan);
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+.definition-container h3 {
+  margin-top: 0;
+  font-family: var(--heading-font);
+  text-transform: capitalize;
+}
+
+.definition-container p {
+  margin-bottom: 0;
+}
 
 /* 
    Footer
